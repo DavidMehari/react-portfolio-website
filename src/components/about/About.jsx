@@ -1,6 +1,5 @@
 import React from 'react';
 import './about.css';
-import ME from '../../assets/harold-about.png';
 import { FaAward } from 'react-icons/fa';
 import { FiUsers } from 'react-icons/fi';
 import { VscFolderLibrary } from 'react-icons/vsc';
@@ -16,7 +15,7 @@ const About = () => {
           <div className="about__me-image">
             <img
               src="https://hungarytoday.hu/wp-content/uploads/2021/04/hide-the-pain-harold.jpg"
-              alt="About Image"
+              alt="About"
             />
           </div>
         </div>
