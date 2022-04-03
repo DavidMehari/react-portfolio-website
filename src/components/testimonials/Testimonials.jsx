@@ -6,7 +6,7 @@ import AVTR3 from '../../assets/avatar3.jpg';
 import AVTR4 from '../../assets/avatar4.jpg';
 
 // import Swiper core and required modules
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper';
+import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -59,10 +59,15 @@ const Testimonials = () => {
       <h2>Testimonials</h2>
 
       <Swiper className="container testimonials__container"
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={40}
         slidesPerView={1}    
         pagination={{ clickable: true }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
       >
         {data.map(({ avatar, name, review }, i) => (
           <SwiperSlide key={i} className="testimonial">
